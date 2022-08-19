@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddProfile</title>
+    <script src="https://kit.fontawesome.com/61d8d73bb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'css/addprofile.css'%}">
+    <link rel="stylesheet" href="{%static 'css/editprofile.css' %}">
+</head>
+<body>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">{{form.errors}}</div>
+    <div class="col-4"></div>
+</div>
+<div id="page" class="site">
+     <div class="container">
+    <div class="wrapper">
+     <div class="signup">
+            <div class="content-heading">
+                <div class="y-style">
+                    <div class="logo">
+
+                    </div>
+                    <div class="welcome">
+                        <h2>Add Here!!. <br></h2>
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-form">
+                <div class="y-style">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {%csrf_token%}
+
+
+
+
+
+                        <p>
+                            <label >About</label>
+                            <input type="text" name="about" id="id_about"  placeholder="Enter Your Bio Here">
+                        </p>
+                         <p>
+                            <label >Designation</label>
+                            <input type="text" name="designation" id="id_designation"  placeholder="Enter Your Designation">
+                        </p>
+                        <p>
+                            <label >Company</label>
+                            <input type="text" name="company" id="id_company"  placeholder="Enter Your Company Name">
+                        </p>
+                        <p>
+                            <label >Year Of Experience</label>
+                            <input type="number" name="yearofexperience" id="id_yearofexperience"  placeholder="Enter Your Experience">
+                        </p>
+                        <p>
+                            <label >Description</label>
+                            <input type="text" name="description" id="id_description"  placeholder="Enter Your Job Description">
+                        </p>
+                        <p>
+                            <label >Address</label>
+                            <input type="text" name="address" id="id_address"  placeholder="Enter Your Address">
+                        </p>
+                        <p>
+                            <label >Phone</label>
+                            <input type="number" name="phone" id="id_phone"  placeholder="Enter Your Phone Number">
+                        </p>
+                         <p>
+                            <label >Date Of Birth</label>
+                            <input type="date" name="date_of_birth" id="id_date_of_birth" >
+                        </p>
+
+                        <p>
+                            <label >Upload Image</label>
+                            <input type="file" name="image" id="id_image">
+                        </p>
+
+                        <p>
+                            <label >Gender</label><br>
+                            <select id="id_gender" name="gender" class="form-control" style="width:100%; outline: 0;
+    margin: 0 0 20px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 1px solid var(--light-color);">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">other</option>
+
+                              </select>
+
+                        </p>
+                        <p class="check">
+                            <input type="checkbox" id="terms">
+                            <label for="condition">Publish profile</label>
+                        </p>
+
+
+
+                        <p><button type="submit">Add Profile Details</button> </p>
+                    </form>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+ </div>
+     </div>
+</div>
+</body>
+</html>
